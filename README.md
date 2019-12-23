@@ -1,4 +1,19 @@
 # Git提交项目基本操作（排错指南）
+##创建用户及邮箱
+```
+$ git config --global user.name "xxx"
+$ git config --global user.email xxxxx.com
+```
+##文件git初始化
+```
+$ git init
+```
+##代码提交
+```
+git add * ##提交暂存所有
+git commit -m 'xxx' ##完成提交并写入提交内容
+git status ##显示提交状态
+```
 ## SSH
 ### 生成密钥
 ```
