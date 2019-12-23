@@ -41,8 +41,8 @@ git push origin master
 ```
 
 
-#npm篇
-##加速npm下载
+# npm篇
+## 加速npm下载
 ```
 npm install --registry=https://registry.npm.taobao.org
 ```
