@@ -39,3 +39,10 @@ git pull origin master --allow-unrelated-histories
 重新add和commit README.md
 git push origin master
 ```
+
+
+#npm篇
+##加速npm下载
+```
+npm install --registry=https://registry.npm.taobao.org
+```
