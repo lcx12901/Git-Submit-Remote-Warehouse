@@ -33,6 +33,24 @@ ssh -T git@github.com
 git remote add origin git@github.com:lcx12901/xxx.git
 git push -u origin master
 ```
+## 遇到“ssh: connect to host github.com port 22: Connection refused”的问题，办法如下：
+### 打开存放ssh的目录
+```
+cd ~/.ssh
+ls
+```
+### 查看是否存在 id_rsa   id_rsa.pun  known_hosts 三个文件，没有上面生成
+### 存在，则新建config文件输入下面内容
+```
+Host github.com
+User 1367372276@qq.com
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
+```
+### 保存之后再次执行"ssh -T git@github.com"时，会出现如下提示，回车"yes"即可
+
 ## 消除本地README.md与远程仓库的差异，避免报错
 ```
 git pull origin master --allow-unrelated-histories
